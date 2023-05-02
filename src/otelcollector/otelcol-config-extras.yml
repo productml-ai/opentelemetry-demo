@@ -2,3 +2,10 @@
 # SPDX-License-Identifier: Apache-2.0
 # extra settings to be merged into OpenTelemetry Collector configuration
 # do not delete this file
+
+
+# OTLP Exporter Configuration for Internal Backend
+
+exporters:
+  otlp:
+
