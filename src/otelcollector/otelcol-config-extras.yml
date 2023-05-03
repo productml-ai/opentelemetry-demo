@@ -8,4 +8,4 @@
 
 exporters:
   otlp:
-
+    endpoint: "localhost:4317"
