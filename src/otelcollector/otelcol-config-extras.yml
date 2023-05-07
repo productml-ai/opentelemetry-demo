@@ -8,4 +8,5 @@
 
 exporters:
   otlp:
-    endpoint: "0.0.0.0:4317"
+#    endpoint: "0.0.0.0:4317"
+    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
