@@ -10,8 +10,8 @@
 
 exporters:
   otlp:
-    endpoint: "http://0.0.0.0:4319"
+    endpoint: "0.0.0.0:4317"
 #    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
-  logging:
-    endpoint: "http://0.0.0.0:4319"
+#  logging:
+#    endpoint: "0.0.0.0:4317"
 #    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
