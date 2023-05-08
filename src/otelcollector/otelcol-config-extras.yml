@@ -6,7 +6,21 @@
 
 # OTLP Exporter Configuration for Internal Backend
 
+# Using default receivers in otelcol-config.yml  
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+        cors:
+          allowed_origins:
+            - "http://*"
+            - "https://*"
+    endpoint: "0.0.0.0:4319" # Otlp Receiver from AMACA
+
 exporters:
   otlp:
 #    endpoint: "0.0.0.0:4317"
+    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
+  logging:
     endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
