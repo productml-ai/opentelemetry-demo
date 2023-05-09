@@ -7,11 +7,3 @@
 # OTLP Exporter Configuration for Internal Backend
 
 # Using default receivers in otelcol-config.yml  
-
-exporters:
-  otlp:
-    endpoint: "localhost:4319"
-#    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
-  logging:
-    endpoint: "localhost:4319"
-#    endpoint: "https://test1.diagnostics.monitoring.core.windows.net/"
