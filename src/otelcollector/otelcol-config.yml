@@ -14,7 +14,7 @@ receivers:
 
 exporters:
   otlp:
-    endpoint: "0.0.0.0:4330"
+    endpoint: "localhost:4330"
     tls:
       insecure: true
   logging:
