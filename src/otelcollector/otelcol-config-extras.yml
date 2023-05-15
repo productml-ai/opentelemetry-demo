@@ -6,4 +6,22 @@
 
 # OTLP Exporter Configuration for Internal Backend
 
-# Using default receivers in otelcol-config.yml  
+exporters:
+  otlp:
+    endpoint: "localhost:4330"
+
+processors:
+  customtraceprocessor:
+    name: customtraceprocessor
+    spans:
+      exporters:
+        otlp:
+          endpoint: "http://localhost:4330/api/v2/spans"
+          format: "json"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp, logging, spanmetrics]
