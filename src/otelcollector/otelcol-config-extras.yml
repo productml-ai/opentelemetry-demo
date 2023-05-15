@@ -8,7 +8,7 @@
 
 exporters:
   otlp:
-    endpoint: "http://localhost:4330"/api/v2/spans"
+    endpoint: "http://localhost:4330/api/v2/spans"
 
 service:
   pipelines:
