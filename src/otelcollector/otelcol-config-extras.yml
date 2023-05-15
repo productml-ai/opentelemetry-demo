@@ -16,7 +16,8 @@ processors:
     spans:
       exporters:
         otlp:
-          endpoint: "http://localhost:4330/"
+          endpoint: "http://localhost:4330/api/v2/spans"
+          format: "json"
 
 service:
   pipelines:
