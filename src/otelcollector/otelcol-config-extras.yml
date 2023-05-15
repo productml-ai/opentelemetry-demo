@@ -8,16 +8,7 @@
 
 exporters:
   otlp:
-    endpoint: "localhost:4330"
-
-processors:
-  customtraceprocessor:
-    name: customtraceprocessor
-    spans:
-      exporters:
-        otlp:
-          endpoint: "http://localhost:4330/api/v2/spans"
-          format: "json"
+    endpoint: "http://localhost:4330"/api/v2/spans"
 
 service:
   pipelines:
