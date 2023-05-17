@@ -6,13 +6,3 @@
 
 # OTLP Exporter Configuration for Internal Backend
 
-exporters:
-  otlp:
-    endpoint: "http://localhost:4317/"
-
-service:
-  pipelines:
-    traces:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [otlp, logging, spanmetrics]
