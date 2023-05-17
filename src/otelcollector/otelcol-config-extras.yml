@@ -6,13 +6,32 @@
 
 # OTLP Exporter Configuration for Internal Backend
 
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+        cors:
+          allowed_origins:
+            - http://*
+            - https://*
+
 exporters:
   otlp:
     endpoint: "http://localhost:4317"
+    tls:
+      insecure: true
+      insecure_skip_verify: true
+
+processors:
+  batch:
 
 service:
+  telemetry:
+    logs:
+      level: "debug"
   pipelines:
     traces:
       receivers: [otlp]
+      exporters: [otlp]
       processors: [batch]
-      exporters: [otlp, logging, spanmetrics]
