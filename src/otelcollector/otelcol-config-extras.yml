@@ -5,21 +5,3 @@
 
 
 # OTLP Exporter Configuration for Internal Backend
-
-exporters:
-  otlp:
-    endpoint: "http://localhost:4317"
-    tls:
-      insecure: true
-      insecure_skip_verify: true
-
-
-service:
-  telemetry:
-    logs:
-      level: "debug"
-  pipelines:
-    traces:
-      receivers: [otlp]
-      processors: [batch]
-      exporters: [otlp, spanmetrics]
