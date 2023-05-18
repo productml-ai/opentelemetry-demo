@@ -9,11 +9,12 @@
 
 exporters:
   otlp:
-    endpoint: "10.0.0.4:4317"
+    endpoint: "10.0.0.4:4317" # vm eth0
+#    endpoint: "172.17.01.1" #vm docker0
 
 service:
   pipelines:
     traces:
       receivers: [otlp]
       processors: [batch]
-      exporters: [otlp, logging, spanmetrics]
+      exporters: [otlp, spanmetrics]
