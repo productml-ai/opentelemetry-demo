@@ -5,3 +5,15 @@
 
 
 # OTLP Exporter Configuration for Internal Backend
+
+
+exporters:
+  otlp:
+    endpoint: "10.0.0.4:4317"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [batch]
+      exporters: [otlp, logging, spanmetrics]
