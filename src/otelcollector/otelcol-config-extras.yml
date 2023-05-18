@@ -7,7 +7,7 @@
 # OTLP Exporter Configuration for Internal Backend
 
 
-exporters:
-  otlp:
+#exporters:
+#  otlp:
 #    endpoint: "10.0.0.4:4317" # vm eth0
 #    endpoint: "172.17.0.1:4317" #vm docker0
