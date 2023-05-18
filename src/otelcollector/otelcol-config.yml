@@ -14,7 +14,7 @@ receivers:
 
 exporters:
   otlp:
-    endpoint: "172.17.0.1:4317"
+    endpoint: "jaeger:4317"
     tls:
       insecure: true
   logging:
