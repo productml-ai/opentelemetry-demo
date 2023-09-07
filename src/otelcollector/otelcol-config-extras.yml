@@ -8,8 +8,9 @@
 
 exporters:
   azuremonitor:
-    endpoint: "https://dc.services.visualstudio.com/v2/track" # AzMon Default
+#    endpoint: "https://dc.services.visualstudio.com/v2/track" # AzMon Default
 #    instrumentation_key: "5c8599e1-8e09-48c8-8615-b514358b0f56" # Old Key
+    endpoint: "https://westus2-2.in.applicationinsights.azure.com/v2/track" # New Endpoint OTelDemoApplicationInsights
     instrumentation_key: "80fe2786-859b-4617-acf6-57b9e0e64392" # New Key OTelDemoApplicationInsights
 
     
